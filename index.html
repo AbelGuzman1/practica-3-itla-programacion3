@@ -1,0 +1,62 @@
+<!-- Biblioteca Personal CRUD - By Abel -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Biblioteca Personal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Biblioteca Personal</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Añadir Nuevo Libro</h2>
+            <form id="book-form">
+                <input type="hidden" id="book-id">
+                
+                <div class="input-group">
+                    <label for="title">Título:</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="author">Autor:</label>
+                    <input type="text" id="author" required>
+                </div>
+                
+                <button type="submit" id="submit-btn">Añadir Libro</button>
+                <button type="button" id="cancel-btn" style="display: none;">Cancelar Edición</button>
+            </form>
+        </section>
+
+        <section class="list-container">
+            <h2>Lista de Libros</h2>
+            <table id="book-list-table">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+                    <tr>
+                        <td colspan="3" class="empty-message">No hay libros en tu biblioteca. ¡Añade uno!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Datos guardados localmente usando localStorage.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
